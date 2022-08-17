@@ -1,3 +1,18 @@
+# Applying Text Classification with Convolutional Neural Network Architecture to Detect Fake News
+Comprehensive steps in using deep learning on a fake news dataset concerning the 2016 US
+Presidential Elections to classify a given set of labeled news articles into fake news and real
+news. Specifically, the text classification task is performed using a combination of feature
+extraction via word embeddings and convolutional neural networks (CNN)
+
+## File structure
+- copy the data source file and the word embedding file into the folder data/:
+    Source of Fake News Dataset:
+    https://www.kaggle.com/datasets/ruchi798/source-based-news-classification
+    Source of Embedding File:
+    https://nlp.stanford.edu/projects/glove/
+- src/train.py includes data preparation, training of the CNN, and evaluation metrics
+
+
 # python-template
 
 Precondition:
