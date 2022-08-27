@@ -45,7 +45,7 @@ columns = [
     #    "published",
     #    "title",
     #    "text",
-         "language",
+    "language",
     #    "site_url",
     #    "main_img_url",
     #   "type",
@@ -91,7 +91,8 @@ print(f'Shape of the dataset: {df.shape}')
 wc = WordCloud(background_color="white", max_words=200,
                max_font_size=256,
                random_state=42, width=1000, height=1000)
-wc.generate(' '.join(df['title_without_stopwords'] + ' ' + df['text_without_stopwords']))
+wc.generate(' '.join(df['title_without_stopwords'] +
+            ' ' + df['text_without_stopwords']))
 plt.imshow(wc, interpolation="bilinear")
 plt.axis('off')
 plt.show()
@@ -102,7 +103,8 @@ y = np.array(df['label'])
 # Texts are appended to the titles and processed together
 print('text_without_stopwords'[0])
 print('title_without_stopwords'[0])
-x = np.array(df['title_without_stopwords'] + ' ' + df['text_without_stopwords'])
+x = np.array(df['title_without_stopwords'] +
+             ' ' + df['text_without_stopwords'])
 print(x[0])
 
 
@@ -276,7 +278,8 @@ class Net(nn.Module):
           passed to a fully-connected linear layer and output layer
         '''
         super(Net, self).__init__()
-        self.embed = nn.Embedding.from_pretrained(embedding_matrix, freeze=True)
+        self.embed = nn.Embedding.from_pretrained(
+            embedding_matrix, freeze=True)
         # (300, 128, kernel_size=(5,), stride=(1,) -> default stride
         self.conv1 = nn.Conv1d(300, 128, 5)
         self.pool1 = nn.MaxPool1d(5)
