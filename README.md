@@ -5,11 +5,9 @@ news. Specifically, the text classification task is performed using a combinatio
 extraction via word embeddings and convolutional neural networks (CNN)
 
 ## Data sources and structure of the source file
-- copy the data source file and the word embedding file into the folder data/:
-    Source of Fake News Dataset:
-    https://www.kaggle.com/datasets/ruchi798/source-based-news-classification
-    Source of Embedding File:
-    https://nlp.stanford.edu/projects/glove/
+- copy the data source file and the word embedding file into the folder data/
+- Source of Fake News Dataset: https://www.kaggle.com/datasets/ruchi798/source-based-news-classification
+- Source of Embedding File: https://nlp.stanford.edu/projects/glove/
 - src/train.py includes data preparation, data pre-processing of text data, preparation of word
   embedding matrix, training of the CNN, and evaluation metrics
 
